@@ -1,0 +1,125 @@
+body, header, footer, ul, li
+  margin: 0
+  padding: 0
+  line-height: 1.0
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif
+
+h1, h2, h3, h4, p
+  margin: 0
+  padding: 0
+  font-weight: bold
+
+html
+  font-size: 62.5%
+
+body
+  display: grid
+  grid-template-rows: auto auto auto
+  font-size: 1.6rem
+  background: #F7F7F7
+  color: #000
+
+  @media screen and (max-width: 479px)
+    grid-template-columns: 1.5rem 1fr 1.5rem
+
+  @media screen and (min-width: 480px) and (max-width: 1279px)
+    grid-template-columns: 1fr 90% 1fr
+
+  @media screen and (min-width: 1280px)
+    grid-template-columns: 1fr 90% 1fr
+
+  & > header.site-header
+    grid-row: 1
+    grid-column: 2
+    padding: 3.5rem 0 3rem
+
+  & > main
+    grid-row: 2
+    grid-column: 2
+
+  & > footer.site-footer
+    grid-row: 3
+    grid-column: 2
+    padding: 3rem 0
+
+header.site-header
+
+  h1
+    padding: 3rem 0 0
+    font-size: 2.5rem
+
+    span
+      padding: 0 1rem
+      font-size: 1.8rem
+
+      &::before
+        content: ": "
+
+main
+  border-top: solid 0.1rem #333
+  border-bottom: solid 0.1rem #333
+
+  section
+    padding: 3rem 0 4rem
+
+    & + section
+      border-top: solid 0.1rem #333
+
+  h1
+    padding: 1rem 0
+    font-size: 2rem
+
+  * + h1
+    margin-top: 2rem
+
+  a
+    color: inherit
+    text-decoration: none
+
+  ul
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    grid-column-gap: 2rem
+    grid-row-gap: 2rem
+    list-style: none
+
+    li
+
+      a
+        display: block
+        padding: 1rem 0
+        font-size: 1.3rem
+        
+        h1
+          margin: 0
+          padding: 1rem 0 0.5rem
+          font-size: 1.6rem
+
+        p
+          line-height: 1.4
+
+        & > div
+          box-sizing: border-box
+          padding: 2.5rem 2.5rem
+          background: #FFF
+          border-radius: 1rem
+
+          div
+            width: 100%
+            padding-top: 45%
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+
+  svg
+    circle
+      fill: #333
+
+    line
+      stroke-width: 0.5
+      stroke: #CCC
+
+footer.site-footer
+  .copyright
+    text-align: right
+    font-size: 1.4rem
